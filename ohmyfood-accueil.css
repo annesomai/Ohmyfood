@@ -1,0 +1,423 @@
+/* Couleurs : 
+Primaire (violet) : #9356DC
+Secondaire (fuschia) : #FF79DA
+Tertiaire (vert d'eau) : #99E2D0 
+
+Utiliser les propriétés :
+- text-overflow ellipsis
+- overflow hidden
+- white space
+- no wrap
+
+Pour écrire en dégradé :
+- svg 
+ou
+background : background-clip
+
+Pour les superpositions :
+- add z-index
+*/
+
+/* Définition des polices personnalisées */
+
+/* Shrikhand */
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Roboto/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    src: url('Polices/Roboto/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('Polices/Roboto/Roboto-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('Polices/Roboto/Roboto-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('Polices/Roboto/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
+/* APPLICATION POUR ECRANS DE TELEPHONES PORTABLES - Breakpoint: 768px */
+
+@media all and (max-width: 768px)
+{
+    
+body
+{
+font-family: 'Roboto', Helvetica, sans-serif;
+font-style: normal;
+color: black;
+}
+
+/*
+        --------------------           
+            -  HEADER  -
+        --------------------
+*/
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo_noir img
+{
+    width: 210px;
+    padding: 15px;
+}
+
+#localisation
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #DCDCDC;
+}
+
+#localisation p
+{
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+#accueil
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #EFEFEF;
+}
+
+#accueil h1
+{
+    max-width: 280px;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+#accueil h3
+{
+    max-width: 400px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#accueil h2
+{
+    background: linear-gradient(-45deg,#9356DC,#FF79DA);
+    background-clip: text;
+    color: white; 
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px 30px 30px 30px;
+    margin-bottom: 60px;
+}
+
+/*
+        ------------------------           
+            -  NAVIGATION  -
+        ------------------------
+*/
+
+nav
+{
+    margin-top: 30px;
+}
+
+nav h2
+{
+    font-size: 25px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+}
+
+nav li
+{
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+#Nav_1, #Nav_2, #Nav_3
+{
+    background-color: #EFEFEF;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 25px;
+    margin-left: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.Phone, .Menu, .Store
+{
+    color: #696969;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 23px;
+}
+
+.One, .Two, .Three
+{
+    color: white;
+    background-color: #9356DC;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 15px;
+}
+
+.One
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+.Two
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+.Three
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+
+/* Apparence au survol des liens */
+    
+    
+#Nav_1:hover, #Nav_2:hover, #Nav_3:hover
+{
+    background-color: #D2CAEC;
+    text-decoration: none;
+}
+
+
+
+/*
+        ---------------------           
+            -  SECTION  -
+        ---------------------
+*/
+
+section
+{
+    width: 100%;
+    background-color: #EFEFEF;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+
+section h2
+{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.card-article
+{
+    background-color: white;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 1px 1px 15px #DDDBDD;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 260px;
+    margin-bottom: 15px;
+}
+
+.card-article a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.card-article-image
+{
+    border-radius: 21px 21px 0px 0px;
+    height: 70%;
+    width: 100%;
+}
+
+.card-article-image img
+{
+    border-radius: 21px 21px 0px 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-article-image img
+{
+    position: relative;
+    z-index: 1; 
+}
+
+.card-article-image p
+{
+    position: relative;
+    bottom: 185px;
+    left: 275px;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: 75px;
+    padding: 5px;
+    background-color: #99E2D0;
+    color: #2E8B57;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.card-article-texte
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.card-article-texte h1
+{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 7.5px;
+    margin-bottom: 0px;
+}
+
+.card-article-texte h3
+{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+.card-article-texte
+{
+    position: relative;
+    z-index: 1; 
+}
+
+.WhiteHeart
+{
+    position: relative;
+    top: -55px;
+    left: 300px;
+    z-index: 2;
+    font-size: 25px;
+    color: #303030;
+}
+
+/*
+        --------------------           
+            -  FOOTER  -
+        --------------------
+*/
+
+footer
+{
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer h1
+{
+    font-family: 'Shrikhand';
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer ul
+{
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+footer li
+{
+    padding-bottom: 8px;
+    font-size: 16px;
+}
+
+.Utensils, .Handshake
+{
+    margin-right: 10px;
+}
+
+}
