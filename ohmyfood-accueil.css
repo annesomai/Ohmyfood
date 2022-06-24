@@ -71,6 +71,7 @@ body
 font-family: 'Roboto', Helvetica, sans-serif;
 font-style: normal;
 color: black;
+margin: 0px;
 }
 
 /*
@@ -169,6 +170,9 @@ nav h2
     padding-left: 20px;
     margin-bottom: 0px;
     margin-top: 50px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul
@@ -253,7 +257,10 @@ nav li
     text-decoration: none;
 }
 
-
+#Nav_1:hover .fa-solid, #Nav_2:hover .fa-solid, #Nav_3:hover .fa-solid
+{
+    color: #9356DC;
+}
 
 /*
         ---------------------           
@@ -274,6 +281,9 @@ section h2
 {
     padding-top: 10px;
     padding-left: 20px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-article
@@ -299,6 +309,25 @@ section h2
     border-radius: 21px 21px 0px 0px;
     height: 70%;
     width: 100%;
+    position: relative;
+}
+
+.card-article-image p
+{
+    position: absolute;
+    top: 8%;
+    right: 2.5%;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: 75px;
+    padding: 5px;
+    margin: 0px;
+    margin-right: 0px;
+    background-color: #99E2D0;
+    color: #2E8B57;
+    border-radius: 2px 2px 2px 2px;
 }
 
 .card-article-image img
@@ -314,22 +343,6 @@ section h2
 {
     position: relative;
     z-index: 1; 
-}
-
-.card-article-image p
-{
-    position: relative;
-    bottom: 185px;
-    left: 275px;
-    z-index: 2;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    width: 75px;
-    padding: 5px;
-    background-color: #99E2D0;
-    color: #2E8B57;
-    border-radius: 2px 2px 2px 2px;
 }
 
 .card-article-texte
@@ -363,15 +376,45 @@ section h2
     z-index: 1; 
 }
 
-.WhiteHeart
+.Heart
 {
-    position: relative;
-    top: -55px;
-    left: 300px;
+    position: absolute;
+    top: 22%;
+    right: 5%;
     z-index: 2;
-    font-size: 25px;
-    color: #303030;
 }
+
+.Heart .WhiteHeart
+{
+    font-size: 25px;
+    z-index: 3;
+}
+
+.Heart .ColoredHeart
+{
+    display: none;
+}
+
+/* Apparence au survol des coeurs */
+
+.Heart:hover .WhiteHeart
+{
+    display: none;
+}
+
+.Heart:hover .ColoredHeart
+{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(-45deg,#9356DC,#FF79DA);
+    width: 25px;
+    z-index: 3;
+}
+
 
 /*
         --------------------           
