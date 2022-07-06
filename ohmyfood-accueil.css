@@ -7,16 +7,7 @@ Utiliser les propriétés :
 - text-overflow ellipsis
 - overflow hidden
 - white space
-- no wrap
-
-Pour écrire en dégradé :
-- svg 
-ou
-background : background-clip
-
-Pour les superpositions :
-- add z-index
-*/
+- no wrap*/
 
 /* Définition des polices personnalisées */
 
@@ -25,7 +16,7 @@ Pour les superpositions :
     font-family: 'Shrikhand';
     font-style: normal;
     font-weight: 400;
-    src: url('Polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 /* Roboto */
@@ -33,31 +24,31 @@ Pour les superpositions :
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('Polices/Roboto/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Roboto/Roboto-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
-    src: url('Polices/Roboto/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Roboto/Roboto-Light.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
-    src: url('Polices/Roboto/Roboto-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Roboto/Roboto-Thin.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    src: url('Polices/Roboto/Roboto-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Roboto/Roboto-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    src: url('Polices/Roboto/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    src: url('Polices/Roboto/Roboto-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 
@@ -65,14 +56,92 @@ Pour les superpositions :
 
 @media all and (max-width: 768px)
 {
-    
+
+#fond_loader
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation-name: color;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* The element to apply the animation to */
+.loader
+{
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    margin-top: 50vh;
+    margin: auto;
+    transform-origin: bottom center;
+    animation: rotate 3s linear 1;
+}
+
+/* The element to apply the animation to */
+.circle
+{
+    display: inline-block;
+    background-color: #9356DC;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    transform: scale(0);
+    animation: grow 1.5s linear 1;
+    margin: -7px;
+}
+
+/* The element to apply the animation to */
+.circle:nth-child(2)
+{
+    background-color: #FF79DA;
+    animation-delay: 0.75s;
+    z-index: 3;
+}
+
+/* The animation code */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* The animation code */
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* The animation code */
+@keyframes color {
+    from {
+        background: linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);
+    }
+
+    to {
+        background: transparent;
+    }
+}
+
+
 body
 {
-font-family: 'Roboto', Helvetica, sans-serif;
-font-style: normal;
-color: black;
-margin: 0px;
-}
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-style: normal;
+    color: black;
+    margin: 0px;
+}  
 
 /*
         --------------------           
@@ -87,6 +156,8 @@ header
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: white;
+    color: black;
 }
 
 #logo_noir img
@@ -200,7 +271,7 @@ nav li
     padding: 25px;
     margin-left: 25px;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 
 .Phone, .Menu, .Store
@@ -228,7 +299,7 @@ nav li
     position: relative;
     top: 50px;
     left: 12px;
-    z-index: 2;
+    z-index: 0;
 }
 
 .Two
@@ -236,7 +307,7 @@ nav li
     position: relative;
     top: 50px;
     left: 12px;
-    z-index: 2;
+    z-index: 0;
 }
 
 .Three
@@ -244,12 +315,11 @@ nav li
     position: relative;
     top: 50px;
     left: 12px;
-    z-index: 2;
+    z-index: 0;
 }
 
 
 /* Apparence au survol des liens */
-    
     
 #Nav_1:hover, #Nav_2:hover, #Nav_3:hover
 {
