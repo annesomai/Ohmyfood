@@ -1,0 +1,315 @@
+/* Définition des polices personnalisées */
+
+/* Shrikhand */
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Roboto/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    src: url('Polices/Roboto/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('Polices/Roboto/Roboto-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('Polices/Roboto/Roboto-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('Polices/Roboto/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
+/* APPLICATION POUR ECRANS DE TELEPHONES PORTABLES - Breakpoint: 768px */
+
+@media all and (max-width: 768px)
+{
+    
+body
+{
+font-family: 'Roboto', Helvetica, sans-serif;
+font-style: normal;
+color: black;
+margin: 0px;
+}
+
+/*
+        --------------------           
+            -  HEADER  -
+        --------------------
+*/
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ligne_header
+{
+    display: flex;
+}
+
+#logo_noir img
+{
+    width: 200px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.leftArrow
+{
+    font-size: 25px;
+    color: rgb(68, 68, 68);
+    position: absolute;
+    top: 33px;
+    left: 28px;
+}
+
+#photo_header
+{
+    width: 100%;
+}
+
+#photo_header img
+{
+    width: 100%;
+    height: 59vh;
+    object-fit: cover;
+    margin-bottom: -40px;
+}
+
+
+/*
+        ---------------------           
+            -  SECTION  -
+        ---------------------
+*/
+
+section
+{
+    margin-top: -37px;
+    background-color: #EFEFEF;
+}
+
+#Titre
+{
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    border-color: white;
+    border-radius: 40px 40px 0px 0px;
+    padding-top: 35px;
+}
+
+.WhiteHeart
+{
+    position: absolute;
+    right: 9%;
+    top: 50%;
+    font-size: 33px;
+}
+
+section h2
+{
+    font-family: 'Shrikhand';
+    font-size: 30px;
+    font-weight: 400;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+section h1
+{
+    font-size: 17px;
+    font-weight: 200;
+    margin-left: 25px;
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+.soulignement_vert
+{
+    width: 43px;
+    border-top: 3px solid #99E2D0;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.card-article
+{
+   
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 5px 5px 10px lightgrey;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.card-article a
+{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-decoration: none;
+}
+
+.card-article-texte
+{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.card-article-texte h3, .card-article-texte p, .Price
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.card-article-texte h3
+{
+    font-weight: 500;
+}
+
+.card-article-texte p
+{
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.Price
+{
+    position: absolute;
+    right: 3%;
+    bottom: 20%;
+    font-weight: 500;
+}
+
+.card-article-hover
+{
+    display: none;
+    background-color: #99E2D0;
+    width: 20%;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.spinner
+{
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 5px;
+    position: absolute;
+    top: 25%;
+    animation: rotate 0.4s linear 1;
+}
+
+#Command
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Command h1
+{
+    background: linear-gradient(-45deg,#9356DC,#FF79DA);
+    background-clip: text;
+    color: white; 
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 5px 5px 10px lightgrey;
+    margin-bottom: 60px;
+}
+
+/* Apparence au survol des cartes */
+
+.card-article:hover .card-article-hover
+{
+    display: inline-block;
+    transform: scale(0);
+    transform-origin: right;
+    animation: apparition 0.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+.card-article:hover .card-article-texte
+{
+    padding-left: 12.5px;
+}
+
+@keyframes apparition {
+    0% {
+        transform: scaleX(0);
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+}
