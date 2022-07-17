@@ -6,7 +6,7 @@
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="Css/normalize.css" />
-        <link rel="stylesheet" media="screen and (max-width: 767px)" href="ledelicedessens.css" />
+        <link rel="stylesheet" href="pages-menu.css" />
         <script src="https://kit.fontawesome.com/96bc5ec571.js" crossorigin="anonymous"></script>
         <title>Maquette Le délice des sens</title>
     </head>
@@ -14,7 +14,9 @@
 <body>
         <header>
             <div id="ligne_header">
-                <i class="fa-solid fa-arrow-left leftArrow"></i>
+                <a href="ohmyfood-accueil.html">
+                    <i class="fa-solid fa-arrow-left leftArrow"></i>
+                </a>
                 <div id="logo_noir">
                     <img src="Maquettes_Ohmyfood/images/ohmyfood.png" alt="Logo noir Ohmyfood" />
                 </div>
@@ -27,19 +29,23 @@
         <section>
             <div id="Titre">
                 <h2>Le délice des sens</h2>
-                <i class="fa-regular fa-heart WhiteHeart"></i>
+                <div class="Heart">
+                    <i class="fa-regular fa-heart WhiteHeart"></i>
+                    <i class="fa-regular fa-heart ColoredHeart"></i>
+                </div>
             </div>        
 
+        <div id="entrées">    
             <h1>ENTREES</h1>
             <div class="soulignement_vert"></div>
 
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Tartare de thon</h3>
-                <p>Assaisonné au yuzu</p>
+                    <h3>Tartare de thon</h3>
+                    <p>Assaisonné au yuzu</p>
+                </div>
                 <div class="Price">25€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -50,10 +56,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Bouchée de homard croustillant</h3>
-                <p>Et sa farandole de petits légumes</p>
+                    <h3>Bouchée de homard croustillant</h3>
+                    <p>Et sa farandole de petits légumes</p>
+                </div>
                 <div class="Price">35€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -64,10 +70,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Velouté de cèpes</h3>
-                <p>Aux truffes</p>
-                <div class="Price">20€</div>
+                    <h3>Velouté de cèpes</h3>
+                    <p>Aux truffes</p>
                 </div>
+                <div class="Price">20€</div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -75,17 +81,19 @@
                 </div>
                 </a>
             </div>
+        </div>
 
+        <div id="plats">
             <h1>PLATS</h1>
             <div class="soulignement_vert"></div>
             
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Poulet rôti aux herbes de Provence</h3>
-                <p>Et sa crème de truffe</p>
+                    <h3>Poulet rôti aux herbes de Provence</h3>
+                    <p>Et sa crème de truffe</p>
+                </div>
                 <div class="Price">40€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -96,10 +104,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Langouste rôtie</h3>
-                <p>Et ses légumes de saison</p>
+                    <h3>Langouste rôtie</h3>
+                    <p>Et ses légumes de saison</p>
+                </div>
                 <div class="Price">35€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -110,10 +118,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Côte de boeuf Angus</h3>
-                <p>Et sa purée de panais</p>
-                <div class="Price">44€</div>
+                    <h3>Côte de boeuf Angus</h3>
+                    <p>Et sa purée de panais</p>
                 </div>
+                <div class="Price">44€</div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -121,17 +129,19 @@
                 </div>
                 </a>
             </div>
+        </div>
 
+        <div id="desserts">
             <h1>DESSERTS</h1>
             <div class="soulignement_vert"></div>
 
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Farandole de desserts</h3>
-                <p>Du chef</p>
+                    <h3>Farandole de desserts</h3>
+                    <p>Du chef</p>
+                </div>
                 <div class="Price">18€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -142,10 +152,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Crème brulée </h3>
-                <p>Revisitée</p>
+                    <h3>Crème brulée </h3>
+                    <p>Revisitée</p>
+                </div>
                 <div class="Price">22€</div>
-                </div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -156,10 +166,10 @@
             <div class="card-article">
                 <a href="#">
                 <div class="card-article-texte">
-                <h3>Tiramisu</h3>
-                <p>À la noisette</p>
-                <div class="Price">23€</div>
+                    <h3>Tiramisu</h3>
+                    <p>À la noisette</p>
                 </div>
+                <div class="Price">23€</div>
                 <div class="card-article-hover">
                     <div class="spinner">
                         <i class="fa-solid fa-circle-check check"></i>
@@ -167,6 +177,7 @@
                 </div>
                 </a>
             </div>
+        </div>
 
             <div id="Command">
                 <h1>Commander</h1>
