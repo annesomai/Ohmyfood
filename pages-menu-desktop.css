@@ -223,6 +223,18 @@ section h1
     margin-bottom: 20px;
 }
 
+#card-article-vide
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #EFEFEF;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    color: #EFEFEF;
+}
+
 #entrées
 {
     width: 33%;
