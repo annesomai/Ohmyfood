@@ -478,6 +478,12 @@ footer li
     font-size: 15px;
 }
 
+footer a
+{
+    color: white;
+    text-decoration: none;
+}
+
 .Utensils, .Handshake
 {
     margin-right: 10px;
