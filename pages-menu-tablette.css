@@ -1,0 +1,503 @@
+/* Définition des polices personnalisées */
+
+/* Shrikhand */
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Shrikhand/Shrikhand-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Polices/Roboto/Roboto-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    src: url('Polices/Roboto/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('Polices/Roboto/Roboto-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('Polices/Roboto/Roboto-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('Polices/Roboto/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
+/* APPLICATION POUR ECRANS DE TABLETTES - Entre 768 et 991px */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    
+body
+{
+font-family: 'Roboto', Helvetica, sans-serif;
+font-style: normal;
+color: black;
+margin: 0px;
+}
+
+/*
+        --------------------           
+            -  HEADER  -
+        --------------------
+*/
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ligne_header
+{
+    display: flex;
+}
+
+#logo_noir img
+{
+    width: 200px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.leftArrow
+{
+    font-size: 25px;
+    color: rgb(68, 68, 68);
+    position: absolute;
+    top: 33px;
+    left: 28px;
+}
+
+#photo_header
+{
+    width: 100%;
+}
+
+#photo_header img
+{
+    width: 100%;
+    height: 59vh;
+    object-fit: cover;
+    margin-bottom: -40px;
+}
+
+
+/*
+        ---------------------           
+            -  SECTION  -
+        ---------------------
+*/
+
+section
+{
+    margin-top: -37px;
+    background-color: #EFEFEF;
+}
+
+#Titre
+{
+    width: 100%;
+    position: relative;
+    background-color: #EFEFEF;
+    border-color: white;
+    border-radius: 40px 40px 0px 0px;
+    padding-top: 35px;
+    z-index: 1;
+}
+
+.Heart
+{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    z-index: 2;
+}
+
+.Heart .WhiteHeart
+{
+    display: block;
+    font-size: 33px;
+    z-index: 3;
+}
+
+.Heart .ColoredHeart
+{
+    display: none;
+}
+
+/* Apparence au survol des coeurs */
+
+.Heart:hover .WhiteHeart
+{
+    display: none;
+}
+
+.Heart:hover .ColoredHeart
+{
+    display: block;
+    font-size: 33px;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(180deg,#9356DC,#FF79DA);
+    width: 33px;
+    z-index: 3;
+}
+
+section h2
+{
+    font-family: 'Shrikhand';
+    font-size: 30px;
+    font-weight: 400;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+section h1
+{
+    font-size: 19px;
+    font-weight: 200;
+    margin-left: 30px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.soulignement_vert
+{
+    width: 43px;
+    border-top: 3px solid #99E2D0;
+    margin-left: 31px;
+    margin-bottom: 20px;
+}
+
+.agencement_menu
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-article
+{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 5px 5px 10px lightgrey;
+    width: 46.5%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#entrées
+{
+    opacity: 0;
+    animation-name: apparition;
+    transition-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#plats
+{
+    opacity: 0;
+    animation-name: apparition;
+    transition-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#desserts
+{
+    opacity: 0;
+    animation-name: apparition;
+    transition-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-article a
+{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+.card-article-texte
+{
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    text-overflow : ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-article-texte h3, .card-article-texte p, .Price
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.card-article-texte h3, .card-article-texte p
+{
+    text-overflow : ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-article-texte h3
+{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.card-article-texte p
+{
+    font-weight: 200;
+    font-size: 17px;
+}
+
+.Price
+{
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    top: 52%;
+    padding-right: 20px;
+    white-space : nowrap;
+    overflow : hidden;
+}
+
+.card-article-hover
+{
+    display: none;
+    background-color: #99E2D0;
+    width: 25%;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.spinner
+{
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 5px;
+    position: absolute;
+    top: 25%;
+    animation: rotate 0.4s linear 1;
+}
+
+
+/* Apparence au survol des plats */
+
+.card-article:hover .card-article-hover
+{
+    display: inline-block;
+    transform: scale(0);
+    transform-origin: right;
+    animation: selection 0.5s ease-out 1;
+    animation-fill-mode: forwards;
+}
+
+.card-article:hover .Price
+{
+    display: inline-block;
+    animation: reduction 0.5s ease-out 1;
+    animation-fill-mode: forwards;
+    padding-right: 0px;
+    margin-right: 0px;
+    min-width: 30px;
+    margin-left: 20px;
+}
+
+.card-article:hover .card-article-texte h3, .card-article:hover .card-article-texte p
+{
+    text-overflow : ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes selection {
+    0% {
+        transform: scaleX(0);
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes reduction {
+    from {
+        right: 0px;
+    }
+    to {
+        right: 30px;
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* --------------------------------- */
+
+#Command
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+#Command h1
+{
+    background: linear-gradient(-15deg,#9356DC,#FF79DA);
+    background-clip: text;
+    color: white; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px lightgrey;
+}
+
+/* Apparence au survol des boutons principaux */
+
+#Command h1:hover
+{
+    background: linear-gradient(-15deg,#a179d1,#fca4e5);
+    background-clip: text;
+    color: white; 
+    box-shadow: 0px 15px 20px #bfbbbf;
+}
+
+/*
+        --------------------           
+            -  FOOTER  -
+        --------------------
+*/
+
+footer
+{
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer h1
+{
+    font-family: 'Shrikhand';
+    font-size: 22px;
+    font-weight: 400;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer ul
+{
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 84%;
+}
+
+footer li
+{
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+footer a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.Utensils, .Handshake
+{
+    margin-right: 5px;
+}
+
+}
