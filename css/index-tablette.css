@@ -1,0 +1,540 @@
+/* Couleurs : 
+Primaire (violet) : #9356DC
+Secondaire (fuschia) : #FF79DA
+Tertiaire (vert d'eau) : #99E2D0 
+
+
+/* APPLICATION POUR ECRANS DE TABLETTES - Entre 768 et 991px */
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+
+#fond_loader
+{
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation-name: color;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* The element to apply the animation to */
+.loader
+{
+    height: 50px;
+    width: 50px;
+    margin-top: 50vh;
+    margin: auto;
+    transform-origin: bottom center;
+    animation: rotate 3s linear 1;
+}
+
+/* The element to apply the animation to */
+.circle
+{
+    display: inline-block;
+    background-color: #9356DC;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: relative;
+    transform: scale(0);
+    animation: grow 1.5s linear 1;
+    margin: -7px;
+}
+
+/* The element to apply the animation to */
+.circle:nth-child(2)
+{
+    background-color: #FF79DA;
+    animation-delay: 0.75s;
+}
+
+/* The animation code */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* The animation code */
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* The animation code */
+@keyframes color {
+    from {
+        background: linear-gradient(135deg,#f6f6f6 0%,#d0d0d0 100%);
+        z-index: 4;
+    }
+
+    to {
+        background: transparent;
+        z-index: 1;
+    }
+}
+
+
+
+body
+{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-style: normal;
+    color: black;
+    margin: 0px;
+}  
+
+/*
+        --------------------           
+            -  HEADER  -
+        --------------------
+*/
+
+header
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+}
+
+#logo_noir
+{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    z-index: 1;
+    box-shadow: 0px 5px 10px #d0d0d0;
+}
+
+#logo_noir img
+{
+    width: 330px;
+    max-height: 95%;
+    padding: 15px;
+    padding-bottom: 15px;
+    z-index: 0;
+}
+
+#localisation
+{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+#localisation p
+{
+    padding-left: 15px;
+    font-weight: 500;
+    color: #3a3a3a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-location-dot
+{
+    padding-bottom: 2px;
+}
+
+#accueil
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    box-shadow: 0px 5px 10px #d0d0d0;
+}
+
+#accueil h1
+{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+#accueil h3
+{
+    text-align: center;
+    font-weight: 100;
+    font-size: 19px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#accueil h2
+{
+    background: linear-gradient(-15deg,#9356DC,#FF79DA);
+    color: white; 
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 5px 10px lightgrey;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+/* Apparence au survol des boutons principaux */
+
+#accueil h2:hover
+{
+    background: linear-gradient(-15deg,#a179d1,#fca4e5);
+    color: white; 
+    box-shadow: 0px 15px 20px #bfbbbf;
+}
+
+/*
+        ------------------------           
+            -  NAVIGATION  -
+        ------------------------
+*/
+
+nav
+{
+    margin-top: 30px;
+}
+
+nav h2
+{
+    font-size: 25px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul
+{
+    list-style-type: none;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+}
+
+nav li
+{
+    padding: 10px;
+    margin-top: -20px;
+}
+
+#Nav_1, #Nav_2, #Nav_3
+{
+    background-color: #f6f6f6;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 10px lightgrey;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 25px;
+    margin-left: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.Phone, .Menu, .Store
+{
+    color: #696969;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 23px;
+}
+
+.One, .Two, .Three
+{
+    color: white;
+    background-color: #9356DC;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 15px;
+}
+
+.One
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+.Two
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+.Three
+{
+    position: relative;
+    top: 50px;
+    left: 12px;
+    z-index: 2;
+}
+
+
+/* Apparence au survol des liens */
+    
+#Nav_1:hover, #Nav_2:hover, #Nav_3:hover
+{
+    background-color: 	#f5edff;
+    text-decoration: none;
+}
+
+#Nav_1:hover .fa-solid, #Nav_2:hover .fa-solid, #Nav_3:hover .fa-solid
+{
+    color: #9356DC;
+}
+
+/*
+        ---------------------           
+            -  SECTION  -
+        ---------------------
+*/
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+section h2
+{
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-article
+{
+    background-color: white;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 5px 5px 10px lightgrey;
+    width: 44%;
+    height: 260px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-article a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.card-article-image
+{
+    border-radius: 21px 21px 0px 0px;
+    height: 70%;
+    width: 100%;
+    position: relative;
+}
+
+.card-article-image p
+{
+    position: absolute;
+    top: 8%;
+    right: 2.5%;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: 75px;
+    padding: 5px;
+    margin: 0px;
+    margin-right: 0px;
+    background-color: #99E2D0;
+    color: #2E8B57;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.card-article-image img
+{
+    border-radius: 21px 21px 0px 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-article-image img
+{
+    position: relative;
+    z-index: 1; 
+}
+
+.card-article-texte
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.card-article-texte h1
+{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 7.5px;
+    margin-bottom: 0px;
+}
+
+.card-article-texte h3
+{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+.card-article-texte
+{
+    position: relative;
+    z-index: 1; 
+}
+
+.Heart
+{
+    position: absolute;
+    top: 22%;
+    right: 5%;
+    z-index: 2;
+}
+
+.Heart .WhiteHeart
+{
+    font-size: 25px;
+    z-index: 3;
+}
+
+.Heart .ColoredHeart
+{
+    display: none;
+}
+
+/* Apparence au survol des coeurs */
+
+.Heart:hover .WhiteHeart
+{
+    display: none;
+}
+
+.Heart:hover .ColoredHeart
+{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(180deg,#9356DC,#FF79DA);
+    width: 25px;
+    z-index: 3;
+}
+
+
+/*
+        --------------------           
+            -  FOOTER  -
+        --------------------
+*/
+
+footer
+{
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer h1
+{
+    font-family: 'Shrikhand';
+    font-size: 22px;
+    font-weight: 400;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer ul
+{
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 84%;
+}
+
+footer li
+{
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+footer a
+{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.Utensils, .Handshake
+{
+    margin-right: 5px;
+}
+
+}
