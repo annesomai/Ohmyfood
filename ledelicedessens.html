@@ -5,8 +5,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="Css/normalize.css" />
-        <link rel="stylesheet" href="pages-menu.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/pages-menu.css" />
+        <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)" href="css/pages-menu-tablette.css" />
+        <link rel="stylesheet" media="screen and (min-width: 992px)" href="css/pages-menu-desktop.css" />
         <script src="https://kit.fontawesome.com/96bc5ec571.js" crossorigin="anonymous"></script>
         <title>Maquette Le délice des sens</title>
     </head>
@@ -14,15 +20,15 @@
 <body>
         <header>
             <div id="ligne_header">
-                <a href="ohmyfood-accueil.html">
+                <a href="index.html">
                     <i class="fa-solid fa-arrow-left leftArrow"></i>
                 </a>
                 <div id="logo_noir">
-                    <img src="Maquettes_Ohmyfood/images/ohmyfood.png" alt="Logo noir Ohmyfood" />
+                    <img src="images/ohmyfood.png" alt="Logo noir Ohmyfood" />
                 </div>
             </div>
             <div id="photo_header">
-                <img src="Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+                <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image Le délice des sens" />
             </div>
         </header>
 
@@ -35,9 +41,12 @@
                 </div>
             </div>        
 
+        <div id="Menu">
         <div id="entrées">    
             <h1>ENTREES</h1>
             <div class="soulignement_vert"></div>
+
+        <div class="agencement_menu">
 
             <div class="card-article">
                 <a href="#">
@@ -81,11 +90,16 @@
                 </div>
                 </a>
             </div>
+
+        </div>
+        
         </div>
 
         <div id="plats">
             <h1>PLATS</h1>
             <div class="soulignement_vert"></div>
+
+        <div class="agencement_menu">
             
             <div class="card-article">
                 <a href="#">
@@ -129,11 +143,16 @@
                 </div>
                 </a>
             </div>
+        
+        </div>
+
         </div>
 
         <div id="desserts">
             <h1>DESSERTS</h1>
             <div class="soulignement_vert"></div>
+
+        <div class="agencement_menu">
 
             <div class="card-article">
                 <a href="#">
@@ -177,6 +196,11 @@
                 </div>
                 </a>
             </div>
+
+        </div>
+
+        </div>
+
         </div>
 
             <div id="Command">
@@ -199,7 +223,7 @@
                     Mentions légales
                 </li>
                 <li>
-                    Contact
+                    <a href="mailto:annesophielecoguic@hotmail.fr"> Contact </a>
                 </li>
             </ul>
     </footer>
